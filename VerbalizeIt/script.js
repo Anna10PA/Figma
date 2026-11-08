@@ -6,7 +6,7 @@ menuButton.addEventListener('click', function(){
     if (open === false){
         open = true
         navigation.style.transition = '0.5s'
-        navigation.style.right = '50px'
+        navigation.style.right = '0px'
         menuButton.className = 'fa-solid fa-xmark'
     }else{
         open = false

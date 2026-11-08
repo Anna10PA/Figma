@@ -14,11 +14,13 @@ body{
     overflow-x: hidden;
     position:relative
 }
+
 :root{
     --yellow:  rgba(255, 206, 49, 1);
     --grey:  rgba(168, 168, 168, 1);
     --pink: rgba(255, 240, 191, 1);
 }
+
 header div{
     width: 85%;
     display:flex;
@@ -56,7 +58,7 @@ header h3{
     font-size:30px;
     font-weight:700
 }
-header button{
+header button, #menuNav button{
     width: 181px;
     height: 60px;
     border-radius: 100px;
@@ -69,20 +71,41 @@ header button{
     min-width:max-content
 }
 /* menu */
+#menuNav button {
+    width: 100%
+}
+
 #menuNav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     position: absolute;
     right:-100%;
-    top:150px;
+    top: 100px;
     z-index:1;
     background-color: white;
-    width:150px;
+    width:290px;
+    height:90vh;
     padding:40px 30px;
-    box-shadow: 0px 0px 5px;
     line-height: 2;
     border-radius: 5px;
+    padding-bottom: 60px ;
 }
+
+#menuNav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px
+}
+
 #menuNav ul li{
-    list-style-type: circle;
+    list-style-type: none;
+    width: 100%;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding-bottom: 10px;
     cursor:pointer
 }
 header i{
@@ -431,9 +454,10 @@ footer button img{
     margin-bottom:30px
 }
 @media(max-width: 1220px){
-    header nav{
+    header nav, header button{
         display:none;
     }
+
     header{
         gap:20px
     }
